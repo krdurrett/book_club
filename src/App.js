@@ -8,19 +8,22 @@ class App extends Component {
     this.state = {
       books: [
         {
+          id: 1,
           title: 'The Name of the Wind',
           description: 'Tale of Kvothe',
-          image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.goodreads.com%2Fbook%2Fshow%2F186074.The_Name_of_the_Wind&psig=AOvVaw3GRVm_rkrempksrbCXuGue&ust=1643819519935000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjV3NP43vUCFQAAAAAdAAAAABAJ'
+          image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1610525073i/30688375._SX540_.jpg'
         },
         {
+          id: 2,
           title: 'The Wise Mans Fear',
           description: 'Tale of Kvothe, as he ages',
-          image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fcianpepper%2Fa-wise-mans-fear%2F&psig=AOvVaw1Ml6A428N_F8rOSsHdIv6q&ust=1643820083281000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLin_Kb53vUCFQAAAAAdAAAAABAF'
+          image: 'https://i1.sndcdn.com/avatars-000126148758-f00pzk-t500x500.jpg'
         },
         {
+          id: 3,
           title: 'The Slow Regard of Silent Things',
           description: 'Tale of Auri',
-          image: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.goodreads.com%2Fbook%2Fshow%2F21535271-the-slow-regard-of-silent-things&psig=AOvVaw0oEq68ibLQ52DUNWX2xTaH&ust=1643820264388000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKiltPv53vUCFQAAAAAdAAAAABAD'
+          image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1414580631i/11668451._SY540_.png'
         }
       ]
     }
@@ -30,7 +33,7 @@ class App extends Component {
     return (
       <main className='App'>
         <h1>Book Club</h1>
-        <BookContainer name='Kayla'/>
+        <BookContainer books={this.state.books}/>
       </main>
     )
   }
