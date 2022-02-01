@@ -42,8 +42,8 @@ class App extends Component {
   render() {
     return (
       <main className='App'>
-        <h1>Book Club</h1>
-        {!this.state.books.length && <h2>No Books Yet -- Add Some!</h2>}
+        <h1 className='title-bar'>Book Club</h1>
+        {!this.state.books.length && <h2 className='no-data'>No Books Yet -- Add Some!</h2>}
         <Form addBook={this.addBook} />
         <BookContainer books={this.state.books} deleteBook={this.deleteBook}/>
       </main>
