@@ -34,13 +34,18 @@ class App extends Component {
     this.setState({ books: [...this.state.books, newBook]})
   }
 
+  deleteBook = (id) => {
+    const filteredBooks = this.state.books.filter(book => book.id != id)
+    this.setState({ books: filteredBooks})
+  }
+
   render() {
     return (
       <main className='App'>
         <h1>Book Club</h1>
         {!this.state.books.length && <h2>No Books Yet -- Add Some!</h2>}
         <Form addBook={this.addBook} />
-        <BookContainer books={this.state.books}/>
+        <BookContainer books={this.state.books} deleteBook={this.deleteBook}/>
       </main>
     )
   }

@@ -2,7 +2,7 @@ import React from 'react'
 import Book from './Book'
 import './BookContainer.css'
 
-const BookContainer = ({books}) => {
+const BookContainer = ({books, deleteBook}) => {
     const bookCards = books.map(book => {
         return (
             <Book
@@ -11,6 +11,7 @@ const BookContainer = ({books}) => {
                 img={book.image}
                 id={book.id}
                 key={book.id}
+                deleteBook={deleteBook}
             />
         )
     })
