@@ -44,8 +44,8 @@ class App extends Component {
       <main className='App'>
         <h1 className='title-bar'>Book Club</h1>
         {!this.state.books.length && <h2 className='no-data'>No Books Yet -- Add Some!</h2>}
-        <Form addBook={this.addBook} />
-        <BookContainer books={this.state.books} deleteBook={this.deleteBook}/>
+        <Form className='form' addBook={this.addBook} />
+        <BookContainer className='book-container' books={this.state.books} deleteBook={this.deleteBook}/>
       </main>
     )
   }
