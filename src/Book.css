@@ -2,4 +2,14 @@
   box-sizing: border-box;
   border: 3px solid black;
   padding: 10px;
+  background: rgba(225, 225, 225, 0.6);
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 20px;
 }

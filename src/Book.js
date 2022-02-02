@@ -5,9 +5,9 @@ const Book = ({ title, description, img, id, deleteBook}) => {
     return (
         <div className='book'>
             <img src={img} />
-            <p>{title}</p>
-            <p>{description}</p>
-            <button onClick={() => deleteBook(id)}>Read it already? Remove 🗑</button>
+            <p className='title'>{title}</p>
+            <p className='description'>{description}</p>
+            <button onClick={() => deleteBook(id)}>Read it? Remove 🗑</button>
         </div>
     )
 }
